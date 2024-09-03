@@ -1,10 +1,10 @@
 package org.example;
 
-public class LigarLuzTarefa implements TarefaLuz {
+public class LigarLuzAcao implements AcaoLuz {
 
     private Luz luz;
 
-    public LigarLuzTarefa(Luz luz) {
+    public LigarLuzAcao(Luz luz) {
         this.luz = luz;
     }
 

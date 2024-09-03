@@ -20,7 +20,7 @@ class ControleRemotoTest {
 
     @Test
     void deveLigarLuzSala() {
-        TarefaLuz ligarLuzSala = new LigarLuzTarefa(luzSala);
+        AcaoLuz ligarLuzSala = new LigarLuzAcao(luzSala);
         controleRemoto.executarTarefa(ligarLuzSala);
 
         assertEquals("Ligada", luzSala.getEstado());
@@ -28,8 +28,8 @@ class ControleRemotoTest {
 
     @Test
     void deveDesligarLuzCozinha() {
-        TarefaLuz ligarLuzCozinha = new LigarLuzTarefa(luzCozinha);
-        TarefaLuz desligarLuzCozinha = new DesligarLuzTarefa(luzCozinha);
+        AcaoLuz ligarLuzCozinha = new LigarLuzAcao(luzCozinha);
+        AcaoLuz desligarLuzCozinha = new DesligarLuzAcao(luzCozinha);
 
         controleRemoto.executarTarefa(ligarLuzCozinha);
         controleRemoto.executarTarefa(desligarLuzCozinha);
@@ -39,8 +39,8 @@ class ControleRemotoTest {
 
     @Test
     void deveCancelarDesligarLuzSala() {
-        TarefaLuz ligarLuzSala = new LigarLuzTarefa(luzSala);
-        TarefaLuz desligarLuzSala = new DesligarLuzTarefa(luzSala);
+        AcaoLuz ligarLuzSala = new LigarLuzAcao(luzSala);
+        AcaoLuz desligarLuzSala = new DesligarLuzAcao(luzSala);
 
         controleRemoto.executarTarefa(ligarLuzSala);
         controleRemoto.executarTarefa(desligarLuzSala);

@@ -1,6 +1,6 @@
 package org.example;
 
-public interface TarefaLuz {
+public interface AcaoLuz {
 
     void executar();
     void cancelar();
